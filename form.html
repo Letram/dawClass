@@ -16,13 +16,31 @@
     <label for="nameInput">
         Nombre:
     </label>
-    <input type="text" form="testId" id="nameInput" placeholder="Su nombre aquí" autofocus>
+    <input type="text" form="testId" id="nameInput" placeholder="Su nombre aquí" autofocus required>
 </div>
 <div>
-    <label for="dirInput">
-        Direccion:
+    <label for="messageInput">
+        mensaje:
     </label>
-    <input type="text" form="testId" id="dirInput" placeholder="Su direccion aquí">
+    <input type="text" form="testId" id="messageInput" placeholder="Su direccion aquí" size="45" maxlength="10">
+</div>
+<div>
+    <label for="rangeInput">
+        rango:
+    </label>
+    <input type="range" form="testId" id="rangeInput" min="0" max="100" step="20" value="2">
+</div>
+<div>
+    <label for="dateInput">
+        fecha:
+    </label>
+    <input type="date" form="testId" id="dateInput" >
+</div>
+<div>
+    <label for="progress">
+        fecha:
+    </label>
+    <progress id="progress" value="35" max="100"></progress>
 </div>
     <input type="submit" value="Enviar" form="testId">
 </body>
