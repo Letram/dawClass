@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <script>
+        function testFormulario(){
+        }
+    </script>
+</head>
+<body>
+<!-- El return false lo que hace es evitar que una página se recargue. Gracias a eso podemos hacer que el nombre que ponemos en el input siga ahí y no desaparezca una vez clickamos el botón.-->
+    <form id="testId" name="test" onsubmit="testFormulario();return false;"></form>
+<div>
+    <label for="nameInput">
+        Nombre:
+    </label>
+    <input type="text" form="testId" id="nameInput" placeholder="Su nombre aquí" autofocus>
+</div>
+<div>
+    <label for="dirInput">
+        Direccion:
+    </label>
+    <input type="text" form="testId" id="dirInput" placeholder="Su direccion aquí">
+</div>
+    <input type="submit" value="Enviar" form="testId">
+</body>
+</html>
