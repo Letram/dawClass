@@ -6,17 +6,34 @@
     <style></style>
     <script>
         function testFormulario(){
+            correo=document.getElementById("dir");
+            nombre = document.getElementById("nameInput");
+            alert("Información que se enviaría al server: "+ nombre.value + " "+ correo.value);
+            return false
+        }
+        function comprueba(event){
+            if(event.willValidate){
+                if(!event.valid){
+                    event.setCustomValidity("Pues me da que no eeh")
+                }
+            }
         }
     </script>
 </head>
 <body>
 <!-- El return false lo que hace es evitar que una página se recargue. Gracias a eso podemos hacer que el nombre que ponemos en el input siga ahí y no desaparezca una vez clickamos el botón.-->
-    <form id="testId" name="test" onsubmit="testFormulario();return false;"></form>
+<form id="testId" name="test" onsubmit="return testFormulario();"></form>
 <div>
     <label for="nameInput">
         Nombre:
     </label>
     <input type="text" form="testId" id="nameInput" placeholder="Su nombre aquí" autofocus required>
+</div>
+<div>
+    <label for="dir">
+        email:
+    </label>
+    <input type="email" form="testId" id="dir" onchange="comprueba(this)" placeholder="correo">
 </div>
 <div>
     <label for="messageInput">
@@ -42,6 +59,8 @@
     </label>
     <progress id="progress" value="35" max="100"></progress>
 </div>
-    <input type="submit" value="Enviar" form="testId">
+
+<input type="submit" value="Enviar" form="testId">
+<input type="submit" value="Guardar y seguir" formnovalidate form="testId">
 </body>
 </html>
