@@ -5,16 +5,6 @@ function sendNote() {
     localStorage.setItem(index, nota.value);
     showNote(index);
     localStorage.setItem("index", ++index);
-    /*
-    li = document.createElement("li");
-    li.innerHTML=nota.value;
-    li.setAttribute("id", index);
-    li.addEventListener("click", function(){
-        localStorage.removeItem(li.id);
-        li.parentNode.removeChild(li);
-    });
-    document.getElementById("notas").appendChild(li);
-    */
 }
 
 function showNotes(){
@@ -30,13 +20,6 @@ function showNote(index){
         li.setAttribute("id", index);
         li.setAttribute("onclick", "removeNote(\""+index+"\");");
         document.getElementById("notas").appendChild(li);
-        /*
-        li.addEventListener("click", function(){
-            id = li.id;
-            localStorage.removeItem(id);
-            showNotes();
-        });
-        */
 }
 function removeAllNotes(){
     ul = document.getElementById("notas");
