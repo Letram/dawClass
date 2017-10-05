@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notas</title>
+    <link rel="stylesheet" href="notas.css">
+    <script src="localstorage3.js"></script>
+</head>
+<body onload="showNotes()">
+<form onsubmit="return false;">
+    <input type="text" name="note" id="note" autofocus>
+    <input type="submit" id="add_button" value="Añadir nota" onclick="sendNote()">
+    <input type="submit" id="remove_all" value="Borrar todo" onclick="removeAllNotes()">
+</form>
+<ul id="notas">
+
+</ul>
+</body>
+</html>
