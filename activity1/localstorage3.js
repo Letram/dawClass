@@ -20,7 +20,7 @@ function sendNote() {
 function showNotes(){
     document.getElementById("notas").innerHTML='';
     for (var index in localStorage){
-        if(index.value === "index")continue;
+        if(index === "index")continue;
         showNote(index);
     }
 }
@@ -28,11 +28,15 @@ function showNote(index){
         li = document.createElement("li");
         li.innerHTML=localStorage.getItem(index);
         li.setAttribute("id", index);
+        li.setAttribute("onclick", "removeNote(\""+index+"\");");
         document.getElementById("notas").appendChild(li);
+        /*
         li.addEventListener("click", function(){
-            localStorage.removeItem(li.getAttribute("id"));
+            id = li.id;
+            localStorage.removeItem(id);
             showNotes();
         });
+        */
 }
 function removeAllNotes(){
     ul = document.getElementById("notas");
@@ -40,4 +44,11 @@ function removeAllNotes(){
         ul.removeChild(ul.firstChild);
     }
     localStorage.clear();
+}
+
+function removeNote(index){
+    localStorage.removeItem(index);
+    li = document.getElementById(index);
+    li.parentNode.removeChild(li);
+    showNotes();
 }
