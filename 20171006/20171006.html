@@ -16,7 +16,7 @@
                 alert("El navegador no soporta la cosa esta");
             }
             //conexión con la DB. El primer parámetro es el nombre de la BD y el segundo es la versión.
-            connection = window.indexedDB.open("Correos", 1);
+            connection = window.indexedDB.open("usuarios", 1);
 
             connection.onerror = function (event) {
                 console.log("Error en la apertura de la BD", event.target.errorCode);
@@ -33,11 +33,11 @@
                         //si no existe la tabla 'usuarios' dentro de las tablas de la DB(objectStoreNames),
                         // la creamos con un índice autoincrementado.
                         if (!db.objectStoreNames.contains('usuarios')){
-                            obUsuarios = db.createObjectStore('usuarios', {autoincrement: true});
+                            obUsuarios = db.createObjectStore('usuarios', {autoIncrement: true});
                             //indice secundario: nombre_indice, columna_indice, options
                             //en este caso hemos creado una clave alterna en la columna index.
                             obUsuarios.createIndex("index_email", "email", {unique:true})
-                            console.log("Clave secundaria puesta")
+                            console.log("Tabla 'usuarios' creada")
                         }
                         break;
                     case 2:
@@ -47,9 +47,28 @@
                 }
             }
         }
+        function addUsers(){
+            //Abrir conexión -> Abrir transacción -> Operación
+            var db = window.indexedDB.open("Correos");
+            db.onsuccess = function (event) {
+                console.log("Base de datos abierta mediante el método add");
+                //lista_tablas_a_trabajar, modo_trabajo(RW | RO)
+                var transaction = db.result.transaction(["usuarios"], "readwrite");
+                transaction.onerror = function (event) {
+                    console.log("Error en la transacción de addUsers", event)
+                }
+                //Hacemos un lock de la tabla para la consistencia. Indicamos qué tabla vamos a coger ahora.
+                var userTable = transaction.objectStore("usuarios")
+                for(var user in usuarios){
+                    userTable.add(usuarios[user]);
+                }
+            }
+        }
     </script>
 </head>
 <body>
-
+<div style="text-align: center; margin-top: 50px">
+    <button onclick="addUsers()">Añadir usuarios</button>
+</div>
 </body>
 </html>
