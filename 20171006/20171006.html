@@ -16,7 +16,7 @@
                 alert("El navegador no soporta la cosa esta");
             }
             //conexión con la DB. El primer parámetro es el nombre de la BD y el segundo es la versión.
-            connection = window.indexedDB.open("usuarios", 1);
+            connection = window.indexedDB.open("usuarios", 2);
 
             connection.onerror = function (event) {
                 console.log("Error en la apertura de la BD", event.target.errorCode);
@@ -41,6 +41,9 @@
                         }
                         break;
                     case 2:
+                        transaccion = event.target.transaction;
+                        var user_table = transaccion.objectStore("usuarios");
+                        user_table.createIndex("index_name", "nombre", {unique:false});
                         break;
                     case 3:
                         break;
@@ -75,11 +78,29 @@
                 //El comportamiento del cursor es como el del un while, por eso usamos el if.
                 if(cursor){
                     var user = document.createElement("li");
-                    user.innerHTML="clave: " + cursor.key + " valor: " + cursor.value.nombre;
+                    user.innerHTML="clave: " + cursor.key + " valor: " + cursor.value.nombre + " correo: " + cursor.value.email;
                     list.appendChild(user);
                     cursor.continue();
                 }else{
                     console.log("No hay más usuarios.")
+                }
+            }
+        }
+
+        function listaBartolos() {
+            var list = document.getElementById("lista");
+            var user_table = connection.result.transaction(['usuarios'], "readonly").objectStore("usuarios");
+            var index = user_table.index("index_name");
+            var query = IDBKeyRange.only("bartolo");
+            index.openCursor(query).onsuccess = function (event) {
+                var cursor = event.target.result;
+                if(cursor){
+                    var user = document.createElement("li");
+                    user.innerHTML="clave: " + cursor.key + " correo: " + cursor.value.email;
+                    list.appendChild(user);
+                    cursor.continue();
+                }else{
+                    console.log("No hay más Bartolos");
                 }
             }
         }
@@ -89,6 +110,8 @@
 <div style="text-align: center; margin-top: 50px">
     <button onclick="addUsers()">Añadir usuarios</button>
     <button onclick="userList()">Lista usuarios</button>
+    <button onclick="listaBartolos()">Lista Bartolos</button>
+
 </div>
 <ul id="lista">
 
