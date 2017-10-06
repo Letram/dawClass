@@ -33,7 +33,7 @@
                         //si no existe la tabla 'usuarios' dentro de las tablas de la DB(objectStoreNames),
                         // la creamos con un índice autoincrementado.
                         if (!db.objectStoreNames.contains('usuarios')){
-                            obUsuarios = db.createObjectStore('usuarios', {autoIncrement: true});
+                            obUsuarios = db.createObjectStore('usuarios',{autoIncrement: true});
                             //indice secundario: nombre_indice, columna_indice, options
                             //en este caso hemos creado una clave alterna en la columna index.
                             obUsuarios.createIndex("index_email", "email", {unique:true})
@@ -49,7 +49,7 @@
         }
         function addUsers(){
             //Abrir conexión -> Abrir transacción -> Operación
-            var db = window.indexedDB.open("Correos");
+            var db = window.indexedDB.open("usuarios");
             db.onsuccess = function (event) {
                 console.log("Base de datos abierta mediante el método add");
                 //lista_tablas_a_trabajar, modo_trabajo(RW | RO)
