@@ -64,11 +64,34 @@
                 }
             }
         }
+
+        function userList() {
+            var list = document.getElementById("lista");
+            var user_table = connection.result.transaction(['usuarios'], "readonly").objectStore("usuarios");
+            //Abrimos un cursor sobre la tabla para poder iterar sobre ella
+            user_table.openCursor().onsuccess = function(event){
+                console.log(event)
+                var cursor = event.target.result;
+                //El comportamiento del cursor es como el del un while, por eso usamos el if.
+                if(cursor){
+                    var user = document.createElement("li");
+                    user.innerHTML="clave: " + cursor.key + " valor: " + cursor.value.nombre;
+                    list.appendChild(user);
+                    cursor.continue();
+                }else{
+                    console.log("No hay más usuarios.")
+                }
+            }
+        }
     </script>
 </head>
 <body>
 <div style="text-align: center; margin-top: 50px">
     <button onclick="addUsers()">Añadir usuarios</button>
+    <button onclick="userList()">Lista usuarios</button>
 </div>
+<ul id="lista">
+
+</ul>
 </body>
 </html>
