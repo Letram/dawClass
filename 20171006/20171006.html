@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB</title>
+    <script>
+        usuarios = [
+            {nombre: 'bartolo', email: 'bartolo@test.com'},
+            {nombre: 'juan', email: 'juan@test.com'},
+            {nombre: 'pepe', email: 'pipo@test.com'},
+            {nombre: 'manuel', email: 'manuel@test.com'},
+            {nombre: 'bartolo', email: 'bartolazo@test.com'}
+        ];
+        window.onload = function () {
+            if (!window.indexedDB){
+                alert("El navegador no soporta la cosa esta");
+            }
+            //conexión con la DB. El primer parámetro es el nombre de la BD y el segundo es la versión.
+            connection = window.indexedDB.open("Correos", 1);
+
+            connection.onerror = function (event) {
+                console.log("Error en la apertura de la BD", event.target.errorCode);
+            };
+            connection.onsuccess = function (event) {
+                console.log("Base de datos abierta", event.target.result);
+            };
+            //Esta función se ejecutará cuando se hace un open de la BD con una versión distinta a la que se tiene en ese momento
+            connection.onupgradeneeded = function (event) {
+                var db = event.target.result;
+                switch (db.version){
+                    //primera versión: creamos una tabla con los usuarios con una clave secundaria en base al email.
+                    case 1:
+                        //si no existe la tabla 'usuarios' dentro de las tablas de la DB(objectStoreNames),
+                        // la creamos con un índice autoincrementado.
+                        if (!db.objectStoreNames.contains('usuarios')){
+                            obUsuarios = db.createObjectStore('usuarios', {autoincrement: true});
+                            //indice secundario: nombre_indice, columna_indice, options
+                            //en este caso hemos creado una clave alterna en la columna index.
+                            obUsuarios.createIndex("index_email", "email", {unique:true})
+                            console.log("Clave secundaria puesta")
+                        }
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
