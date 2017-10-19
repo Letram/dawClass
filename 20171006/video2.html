@@ -16,12 +16,18 @@
 
             canvasDisplay = document.getElementById("canvasDisplay");
             display = canvasDisplay.getContext("2d");
+
+            img = document.createElement("img");
+            img.src ="bullbasaur1600.png";
         }
 
         function frameProcess() {
             var video = document.getElementById("videoID");
             if (video.paused || video.ended)return;
             display.drawImage(video,0,0, canvasDisplay.width, canvasDisplay.height);
+            display.globalAlpha = 0.3;
+            display.drawImage(img,20,20,40,40);
+            display.globalAlpha = 1;
             setTimeout(frameProcess, 0);
         }
     </script>
