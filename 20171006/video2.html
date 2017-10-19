@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <title>Video example</title>
     <style>
+        video, #canvasBuffer{
+            display: none;
+        }
     </style>
     <script>
         window.onload = ini;
         function ini() {
-            var video = document.getElementById("videoID");
+            video = document.getElementById("videoID");
             video.addEventListener("canplay",function () {
                 this.play();
                 frameProcess();
@@ -16,26 +19,32 @@
 
             canvasDisplay = document.getElementById("canvasDisplay");
             display = canvasDisplay.getContext("2d");
+            canvasBuffer = document.getElementById("canvasBuffer");
+            buffer = canvasBuffer.getContext("2d");
 
-            img = document.createElement("img");
-            img.src ="bullbasaur1600.png";
+            canvasDisplay.width = window.innerWidth;
+            canvasDisplay.height = window.innerHeight;
+
+            canvasDisplay.addEventListener("click", function () {
+                video[video.paused ? "play" : "pause"]();
+            }, false);
         }
 
         function frameProcess() {
             var video = document.getElementById("videoID");
             if (video.paused || video.ended)return;
-            display.drawImage(video,0,0, canvasDisplay.width, canvasDisplay.height);
-            display.globalAlpha = 0.3;
-            display.drawImage(img,20,20,40,40);
-            display.globalAlpha = 1;
+            buffer.drawImage(video,0,0, canvasBuffer.width, canvasBuffer.height);
+            canvasDisplay.fillStyle = canvasDisplay.createPattern(canvasBuffer, "repeat");
+            canvasDisplay.fillRect(0,0,canvasDisplay.width, canvasDisplay.height);
             setTimeout(frameProcess, 0);
         }
+
+
     </script>
 </head>
 <body>
-<canvas id="canvasDisplay" width="450px" height="300px">
-
-</canvas>
+<canvas id="canvasDisplay"></canvas>
+<canvas id="canvasBuffer" width="250px" height="200px"></canvas>
 <!-- ponemos el source dentro del video para hacer que luego hayan diversas opciones de reproduccion. (mp4, webm, ...)-->
 <video class="" id="videoID" autoplay controls muted width="300px" height="150px">
     <source src="BigBuckBunny_320x180.mp4">
