@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Video example</title>
+    <style>
+        #playButton{
+            position: absolute;
+            top:  150px;
+            left: 10px;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        window.onload = ini;
+        function ini() {
+            var myVideo = Document.getElementById("videoID");
+            myVideo.removeAttribute("controls");
+        }
+    </script>
 </head>
 <body>
 <button id="playButton" title="Reproducir">&#x25BA</button>
