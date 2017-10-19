@@ -14,21 +14,27 @@
     <script>
         window.onload = ini;
         function ini() {
-            var myVideo = Document.getElementById("videoID");
+            var myVideo = document.getElementById("videoID");
             myVideo.removeAttribute("controls");
 
-            var playButton = Document.getElementById("playButton");
+            var playButton = document.getElementById("playButton");
             playButton.onclick = function(){
                 if(myVideo.paused){
-                    this.title = "En pausa";
-                    this.innerHTML="&#x2590 &#x2590";
                     myVideo.play();
                 } else{
-                    this.title = "Reproducir";
-                    this.innerHTML="&#x25BA";
                     myVideo.pause();
                 }
             }
+
+            myVideo.addEventListener("play", function () {
+                this.title = "En pausa";
+                playButton.innerHTML="&#x2590 &#x2590";
+            }, false);
+
+            myVideo.addEventListener("pause", function () {
+                this.title = "Reproducir";
+                playButton.innerHTML="&#x25BA";
+            }, false);
         }
     </script>
 </head>
