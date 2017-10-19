@@ -16,6 +16,19 @@
         function ini() {
             var myVideo = Document.getElementById("videoID");
             myVideo.removeAttribute("controls");
+
+            var playButton = Document.getElementById("playButton");
+            playButton.onclick = function(){
+                if(myVideo.paused){
+                    this.title = "En pausa";
+                    this.innerHTML="&#x2590 &#x2590";
+                    myVideo.play();
+                } else{
+                    this.title = "Reproducir";
+                    this.innerHTML="&#x25BA";
+                    myVideo.pause();
+                }
+            }
         }
     </script>
 </head>
