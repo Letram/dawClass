@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>actividad2</title>
+    <style>
+        body{
+            background-color: darkslategray;
+            width: 760px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul#imageList{
+            list-style: none;
+            float: right;
+            padding: 50px;
+            margin: 0px;
+            border: 0px;
+            border-radius: 15px;
+            border: solid saddlebrown;
+            background-color: #ffda9e;
+        }
+        #imageList li{
+            float: left;
+            margin: 0 0 0 5px;
+            padding: 5px 5px 25px 5px;
+            background-color: white;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        ul#imageList li img{
+            width: 200px;
+            height: 200px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+        ul#imageList li:hover{
+            -webkit-box-shadow: 3px 3px 2px black;
+            -moz-box-shadow: 3px 3px 2px black;
+            box-shadow: 3px 3px 2px black;
+        }
+        ul#imageList li:hover:nth-of-type(even){
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        ul#imageList li:hover:nth-of-type(odd){
+            -webkit-transform: rotate(366deg) scale(1.2);
+            -moz-transform: rotate(366deg) scale(1.2);
+            -ms-transform: rotate(366deg) scale(1.2);
+            -o-transform: rotate(366deg) scale(1.2);
+            transform: rotate(366deg) scale(1.2);
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+        ul#imageList li:hover:first-child{
+            -webkit-transform: rotate(-9deg) scale(1.5);
+            -moz-transform: rotate(-9deg) scale(1.5);
+            -ms-transform: rotate(-9deg) scale(1.5);
+            -o-transform: rotate(-9deg) scale(1.5);
+            transform: rotate(-9deg) scale(1.5);
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: white">Carlos Martel Lamas</h1>
+    <ul id="imageList">
+        <li><img src="images/landscape-1802337_640.jpg" alt="Paisaje1"></li>
+        <li><img src="images/Paisaje-Natural.jpg" alt="Paisaje2"></li>
+        <li><img src="images/paisaje1.jpg" alt="Paisaje3"></li>
+    </ul>
+</body>
+</html>
