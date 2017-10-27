@@ -1,0 +1,121 @@
+@import "colors";
+@import "mixins";
+
+$br: border-radius;
+$navColor: #230D68;
+$greenColor: #5F8D02;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.5);
+}
+header[role="banner"]{
+  margin: 10px 0 20px 0;
+  border-bottom:4px solid #aaa;
+  height: 120px;
+  background: {
+    color: #9e8bdb;
+    size: 120px 120px;
+    image: url(../imgs/logo.png);
+    repeat: no-repeat;
+    position: top left;
+  }
+  h1{
+    padding: 20px 0 0 200px;
+    font: {
+      size: 3em;
+      family: "Juice ITC";
+      weight: bold;
+    }
+    line-height: 1;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+  nav{
+    padding-left: 200px;
+    a {
+      margin-left: 10px;
+      padding: 4px 6px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #230D68;
+      background: #8571C4;
+      text-transform: uppercase;
+      @include format_border(6px);
+      &:hover{
+        color: lighten($navColor, 40%);
+        background: darken($navColor, 40%);
+      }
+    }
+  }
+}
+.main {
+  margin: 10px 31% 15px 10%;
+}
+
+.izq {
+  margin-right: 10px;
+  float: right;
+  width: 30%;
+  background: #CCF27E;
+  color: #5F8D02;
+}
+section{
+  h2{
+      @include format_header(2em);
+  }
+  h3{
+      @include format_header();
+  }
+  li{
+    margin: 10px 10px;
+  }
+  &.secondary{
+    ul{
+      list-style-type: none;
+      li{
+        clear: both;
+        height: 90px;
+        img{
+          display: block;
+          float: left;
+          width: 30%;
+          @include format_border(10px);
+          margin-right: 10px;
+        }
+        div{
+          float: right;
+          width:65%;
+          a{
+            background: #614AAA;
+            color: #5F8D02;
+            text-decoration: none;
+            &:hover h4{
+              color: lighten($greenColor, 40%);
+              background: darken($greenColor, 5%);
+              @include format_border(6px);
+            }
+          }
+        }
+        &:last-of-type{
+          margin-bottom: 30px;
+        }
+        @each $socialMedia in (facebook, twitter, flickr){
+          &##{$socialMedia}{
+            margin: 0 20px;
+            padding: 0;
+            max-width: 64px;
+            opacity: .3;
+            background: no-repeat url("../imgs/#{$socialMedia}_64.png");
+            &:hover{
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

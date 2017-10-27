@@ -1,0 +1,165 @@
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+header[role="banner"] {
+  margin: 10px 0 20px 0;
+  border-bottom: 4px solid #aaa;
+  height: 120px;
+  background-color: #9e8bdb;
+  background-size: 120px 120px;
+  background-image: url(../imgs/logo.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+header[role="banner"] h1 {
+  padding: 20px 0 0 200px;
+  font-size: 3em;
+  font-family: "Juice ITC";
+  font-weight: bold;
+  line-height: 1;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+header[role="banner"] nav {
+  padding-left: 200px;
+}
+
+header[role="banner"] nav a {
+  margin-left: 10px;
+  padding: 4px 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #230D68;
+  background: #8571C4;
+  text-transform: uppercase;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+header[role="banner"] nav a:hover {
+  color: #8571C4;
+  background: #230D68;
+}
+
+.main {
+  margin: 10px 31% 15px 10%;
+}
+
+.izq {
+  margin-right: 10px;
+  float: right;
+  width: 30%;
+  background: #CCF27E;
+  color: #5F8D02;
+}
+
+section h2 {
+  margin: 0 0 20px 0;
+  font-family: Jubilat, Georgia, serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section h3 {
+  margin: 0 0 20px 0;
+  font-family: Jubilat, Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section li {
+  margin: 10px 10px;
+}
+
+section.secondary ul {
+  list-style-type: none;
+}
+
+section.secondary ul li {
+  clear: both;
+  height: 90px;
+}
+
+section.secondary ul li img {
+  display: block;
+  float: left;
+  width: 30%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+section.secondary ul li div {
+  float: right;
+  width: 65%;
+}
+
+section.secondary ul li div a {
+  background: #614AAA;
+  color: #5F8D02;
+  text-decoration: none;
+}
+
+section.secondary ul li div a:hover h4 {
+  color: #CCF27E;
+  background: #5F8D02;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+section.secondary ul li:last-of-type {
+  margin-bottom: 30px;
+}
+
+section li#facebook {
+  margin: 0 20px;
+  padding: 0;
+  max-width: 64px;
+  opacity: .3;
+  background: no-repeat url("../imgs/facebook_64.png");
+}
+
+section li#facebook:hover {
+  opacity: .7;
+}
+
+section li#twitter {
+  margin: 0 20px;
+  padding: 0;
+  max-width: 64px;
+  opacity: .3;
+  background: no-repeat url("../imgs/twitter_64.png");
+}
+
+section li#twitter:hover {
+  opacity: .7;
+}
+
+section li#flickr {
+  margin: 0 20px;
+  padding: 0;
+  max-width: 64px;
+  opacity: .3;
+  background: no-repeat url("../imgs/flickr_64.png");
+}
+
+section li#flickr:hover {
+  opacity: .7;
+}
+

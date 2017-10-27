@@ -1,0 +1,9 @@
+·Definir colores con Paletton y exportarlos como SASS para importarlos luego. DONE
+·Anidar todo lo posible en lo del css. DONE
+·Hacer mixins para los estilos de h2 y h3 (featured, popular y sociallinks)
+    -> paso de parámetros con valores por defecto (función variable:valorPorDefecto) DONE
+·Mirar donde usar el parent selector. DONE
+·Otro mixin con las esquinas redondeadas.
+·iterador each con los enlaces sociales.
+    ->trabajar con la opacidad al hacer el hover
+·Usar alguna función predefinida (darken, lighten) sobre colores.
