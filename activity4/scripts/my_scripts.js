@@ -30,24 +30,35 @@ $(document).ready(function(){
 	   window.clearInterval(int1);
 	   window.clearInterval(int2);
 	   window.clearInterval(int3);
-
 	}
 	
-	/* completar el código de las funciones para que se produzca el efecto 'relámpago' con las tres imágenes de fondo*/
+	/* completar el cï¿½digo de las funciones para que se produzca el efecto 'relï¿½mpago' con las tres imï¿½genes de fondo*/
 	function lightning_one(){
+		for(i=0;i<3;i++) {
+			$('#lightning1').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+		}
+		$('#lightning1').fadeOut(1000);
 	};
 	
 	function lightning_two(){
+        for(i=0;i<3;i++) {
+            $('#lightning2').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+        }
+        $('#lightning2').fadeOut(1000);
 	};
 
 	function lightning_three(){
+        for(i=0;i<3;i++) {
+            $('#lightning3').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+        }
+        $('#lightning3').fadeOut(1000);
 	};
 
 	window.onblur = stopMe;
 	window.onfocus = runLightning;
 	runLightning();
 	
-	/* asignar eventos 'click' a los elementos head, eyes, nose y mouth para que se desplace la imagen a la izq 367 px con el método 'animate'   
+	/* asignar eventos 'click' a los elementos head, eyes, nose y mouth para que se desplace la imagen a la izq 367 px con el mï¿½todo 'animate'   
 	*/
 	
 	
@@ -55,7 +66,7 @@ $(document).ready(function(){
 	
 	$("#btnReset").click( reset );
 	
-	/* completar (sustituir las XXX) el código de las funciones reset y randomize para que produzca el efecto de reseteo de todas las imágenes a la posición inicial  */ 
+	/* completar (sustituir las XXX) el cï¿½digo de las funciones reset y randomize para que produzca el efecto de reseteo de todas las imï¿½genes a la posiciï¿½n inicial  */ 
 	function reset(){
 		$("XXX").each(function(index){
 			var move_to = clix[index] * distance;
@@ -68,7 +79,7 @@ $(document).ready(function(){
 		var my_random_num = Math.floor(Math.random()*num);
 		return my_random_num;
 	}
-
+/*
 	function randomize(){
 		XXXXXXXXX {
 			var target_position = parseInt( (getRandom(num_monsters) + clix[index]) % num_monsters); 
@@ -86,6 +97,7 @@ $(document).ready(function(){
 				// They are the same - Don't move it.
 			}
 		});
-	};	
+	};
+	*/
 	
 });//end doc.onready function
