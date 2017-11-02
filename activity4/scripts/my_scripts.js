@@ -61,17 +61,50 @@ $(document).ready(function(){
 	/* asignar eventos 'click' a los elementos head, eyes, nose y mouth para que se desplace la imagen a la izq 367 px con el m�todo 'animate'   
 	*/
 	
+	$("#head").click(function(){
+        if(clix[0] < 9){
+            $(this).animate({left: "-=367px"}, 250);
+            clix[0] += 1;
+        }else{
+            $(this).animate({left: "0"}, 250);
+            clix[0] = 0;
+        }
+	});
+    $("#eyes").click(function(){
+        if(clix[1] < 9){
+            $(this).animate({left: "-=367px"}, 1000);
+            clix[1] += 1;
+        }else{
+            $(this).animate({left: "0"}, 1000);
+            clix[1] = 0;
+        }    });
+    $("#nose").click(function(){
+        if(clix[2] < 9){
+            $(this).animate({left: "-=367px"}, 400);
+            clix[2] += 1;
+        }else{
+            $(this).animate({left: "0"}, 400);
+            clix[2] = 0;
+        }    });
+    $("#mouth").click(function(){
+        if(clix[3] < 9){
+            $(this).animate({left: "-=367px"}, 600);
+            clix[3] += 1;
+        }else{
+            $(this).animate({left: "0"}, 600);
+            clix[3] = 0;
+        }    });
+
+	//$("#btnRandom").click( randomize );
 	
-	$("#btnRandom").click( randomize );
-	
-	$("#btnReset").click( reset );
+	$("#btnReset").click(reset) ;
 	
 	/* completar (sustituir las XXX) el c�digo de las funciones reset y randomize para que produzca el efecto de reseteo de todas las im�genes a la posici�n inicial  */ 
 	function reset(){
-		$("XXX").each(function(index){
+		$("#pic_box div").each(function(index){
 			var move_to = clix[index] * distance;
 			clix[index] = 0;
-			$(XXX).XXX({left:"+="+move_to+"px"},500);
+			$(this).animate({left:"+="+move_to+"px"},500);
 		});
 	}
 	
