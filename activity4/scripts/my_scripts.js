@@ -38,23 +38,20 @@ $(document).ready(function(){
 			$('#lightning1').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
 		}
 		$('#lightning1').fadeOut(1000);
-	};
-	
-	function lightning_two(){
+    }
+    function lightning_two(){
         for(i=0;i<3;i++) {
             $('#lightning2').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
         }
         $('#lightning2').fadeOut(1000);
-	};
-
-	function lightning_three(){
+    }
+    function lightning_three(){
         for(i=0;i<3;i++) {
             $('#lightning3').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
         }
         $('#lightning3').fadeOut(1000);
-	};
-
-	window.onblur = stopMe;
+    }
+    window.onblur = stopMe;
 	window.onfocus = runLightning;
 	runLightning();
 	
@@ -95,13 +92,13 @@ $(document).ready(function(){
             clix[3] = 0;
         }    });
 
-	//$("#btnRandom").click( randomize );
+	$("#btnRandom").click( randomize );
 	
 	$("#btnReset").click(reset) ;
 	
 	/* completar (sustituir las XXX) el c�digo de las funciones reset y randomize para que produzca el efecto de reseteo de todas las im�genes a la posici�n inicial  */ 
 	function reset(){
-		$("#pic_box div").each(function(index){
+		$("#pic_box").find("div").each(function(index){
 			var move_to = clix[index] * distance;
 			clix[index] = 0;
 			$(this).animate({left:"+="+move_to+"px"},500);
@@ -109,28 +106,26 @@ $(document).ready(function(){
 	}
 	
 	function getRandom(num){
-		var my_random_num = Math.floor(Math.random()*num);
-		return my_random_num;
+        return Math.floor(Math.random() * num);
 	}
-/*
+
 	function randomize(){
-		XXXXXXXXX {
-			var target_position = parseInt( (getRandom(num_monsters) + clix[index]) % num_monsters); 
+		$("#pic_box").find("div").each(function(index) {
+			var target_position = parseInt( (getRandom(num_monsters) + clix[index]) % num_monsters);
 			var current_position = clix[index] ;
-			
+
 			clix[index] = target_position;
-			
+            var move_to;
 			if( target_position > current_position ) {
-				var move_to = (target_position - (current_position % distance) ) * distance; 
-				$(XXX).XXX({left:"-="+move_to+"px"},500);
+				move_to = (target_position - (current_position % distance) ) * distance;
+				$(this).animate({left:"-="+move_to+"px"},500);
 			}else if( target_position < current_position ){
-				var move_to = ( (current_position % distance) - target_position) * distance; 
-				$(XXX).XXX({left:"+="+move_to+"px"},500);
+				move_to = ( (current_position % distance) - target_position) * distance;
+				$(this).animate({left:"+="+move_to+"px"},500);
 			}else{
 				// They are the same - Don't move it.
 			}
 		});
-	};
-	*/
+	}
 	
 });//end doc.onready function
