@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: greenyellow;
+            position: absolute;
+            left: 100px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        //Poner (document).ready se puede sobreentender y poner directamente $(function{})
+        $(function($){
+            //ó $('div').on("click", function(){})
+
+            $('div').click(function(){
+                //animate es asíncrono, por lo que si leemos la propiedad "left" vamos a leer el parámetro left ANTES de haber terminado la función. Tenemos que ejecutar esa lectura una vez hayamos terminado la animación.
+                $(this).animate({left: '+=100px'}, 2000);
+                left=$(this).attr('style');
+                $(this).html(left);
+                console.log(this)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
