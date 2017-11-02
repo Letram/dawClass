@@ -20,9 +20,10 @@
 
             $('div').click(function(){
                 //animate es asíncrono, por lo que si leemos la propiedad "left" vamos a leer el parámetro left ANTES de haber terminado la función. Tenemos que ejecutar esa lectura una vez hayamos terminado la animación.
-                $(this).animate({left: '+=100px'}, 2000);
-                left=$(this).attr('style');
-                $(this).html(left);
+                $(this).animate({left: '+=100px'}, 2000, function(){
+                    left=$(this).attr('style');
+                    $(this).html(left);
+                });
                 console.log(this)
             })
         })
