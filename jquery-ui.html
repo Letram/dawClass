@@ -11,7 +11,7 @@
             $("#date").datepicker({
                 showOn:"both",
                 buttonImageOnly:true,
-                buttonImage:"iconos-calendario-academico.png",
+                buttonImage:"calendar.png",
                 buttonText:"calendar"
             });
             $("#dialogue").dialog({
@@ -36,10 +36,36 @@
                 $("#dialogue").dialog("open");
             });
             $("#anotherButton").button();
+
+            options={
+                orientation:"horizontal",
+                range:"min",
+                max:255,
+                value:127,
+                //dos funciones de callback, una para cuando movamos el slider y otro para cuando "value" cambie.
+                slide:adjustColor,
+                change:adjustColor
+            };
+            function adjustColor() {
+                var rgb = "rgb("+$("#colorSlider1").slider("value")+","+$("#colorSlider2").slider("value")+","+$("#colorSlider3").slider("value")+")";
+                $("#colorBlock").css("background-color", rgb);
+            }
+            $('[id^="colorSlider"]').slider(options);
         })
 
     </script>
     <style>
+        body{
+            padding:100px;
+        }
+        #coloredDiv .color{
+            margin-bottom: 15px;
+        }
+        #coloredDiv #colorBlock{
+            width:50px;
+            height:50px;
+            background-color: rgb(127,127,127);
+        }
         img.ui-datepicker-trigger {
             vertical-align: middle;
         }
@@ -52,6 +78,12 @@
 <div id="dialogue">
     <h2>Debe vender su alma al Diablo primero. (Aceptar condiciones)</h2>
     <button id="anotherButton">Otro botón</button>
+</div>
+<div id="coloredDiv">
+    <div class="color" id="colorSlider1"></div>
+    <div class="color" id="colorSlider2"></div>
+    <div class="color" id="colorSlider3"></div>
+    <div id="colorBlock"></div>
 </div>
 </body>
 </html>
