@@ -6,8 +6,24 @@
     <script src="node_modules/jquery-ui/external/jquery/jquery.js"></script>
     <script src="node_modules/jquery-ui/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="node_modules/jquery-ui/jquery-ui.css">
+    <script>
+        $(function(){
+            $("#date").datepicker({
+                showOn:"both",
+                buttonImageOnly:true,
+                buttonImage:"iconos-calendario-academico.png",
+                buttonText:"calendar"
+            });
+        })
+    </script>
+    <style>
+        img.ui-datepicker-trigger {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-
+<label for="date">Salida: </label>
+<input type="text" id="date" placeholder="Fecha de salida">
 </body>
 </html>
