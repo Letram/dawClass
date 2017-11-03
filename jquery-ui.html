@@ -14,7 +14,30 @@
                 buttonImage:"iconos-calendario-academico.png",
                 buttonText:"calendar"
             });
+            $("#dialogue").dialog({
+                autoOpen:false,
+                title: "Condiciones de uso.",
+                buttons: [
+                    {
+                        text:"Aceptar",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text:"Cancelar",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+            $("#modalButton").button().on("click", function(){
+                $("#dialogue").dialog("open");
+            });
+            $("#anotherButton").button();
         })
+
     </script>
     <style>
         img.ui-datepicker-trigger {
@@ -25,5 +48,10 @@
 <body>
 <label for="date">Salida: </label>
 <input type="text" id="date" placeholder="Fecha de salida">
+<button id="modalButton">Aviso</button>
+<div id="dialogue">
+    <h2>Debe vender su alma al Diablo primero. (Aceptar condiciones)</h2>
+    <button id="anotherButton">Otro botón</button>
+</div>
 </body>
 </html>
