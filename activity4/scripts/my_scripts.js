@@ -35,19 +35,19 @@ $(document).ready(function(){
 	/* completar el c�digo de las funciones para que se produzca el efecto 'rel�mpago' con las tres im�genes de fondo*/
 	function lightning_one(){
 		for(i=0;i<3;i++) {
-			$('#lightning1').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+			$('#lightning1').fadeTo('slow', 0).fadeTo('slow', 1);
 		}
 		$('#lightning1').fadeOut(1000);
     }
     function lightning_two(){
         for(i=0;i<3;i++) {
-            $('#lightning2').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+            $('#lightning2').fadeTo('slow', 0).fadeTo('slow', 1);
         }
         $('#lightning2').fadeOut(1000);
     }
     function lightning_three(){
         for(i=0;i<3;i++) {
-            $('#lightning3').fadeTo('slow', 0.2).fadeTo('slow', 0.5);
+            $('#lightning3').fadeTo('slow', 1).fadeTo('slow', 1);
         }
         $('#lightning3').fadeOut(1000);
     }
