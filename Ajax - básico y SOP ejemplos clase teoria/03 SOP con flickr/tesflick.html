@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Same Origin Policy con Flickr</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="ajax.js"></script>
+</head>
+<body>
+ 
+<div id="images"></div>
+ 
+<script>
+	function getFlickrPhotos() {
+		// assemble the PHP filename
+		filename = "http://api.flickr.com/services/feeds/photos_public.gne?tags=canarias&tagmode=any&format=json&jsoncallback=?";
+		// DisplayResults will handle the Ajax response
+		ajaxCallback = DisplayResults;
+		// Send the Ajax request
+		ajaxRequest(filename);
+	}
+
+	function DisplayResults(datos){
+		console.log(datos);
+	}
+
+	getFlickrPhotos();
+
+</script>
+ 
+</body>
+</html>
