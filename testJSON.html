@@ -5,7 +5,14 @@
     <title>Title</title>
     <script>
         function showPhotos(data){
-
+            image_array = data.items;
+            for (i = 0; i < image_array.length; i++){
+                image = image_array[i].media;
+                img = document.createElement("img");
+                img.setAttribute("src", image.m);
+                img.setAttribute("alt", "Imagen número " + i);
+                document.getElementsByTagName("body")[0].appendChild(img);
+            }
         }
         var url="http://api.flickr.com/services/feeds/photos_public.gne?tags=canarias&tagmode=any&format=json&jsoncallback=showPhotos";
         var script = document.createElement("script");
