@@ -18,13 +18,24 @@
 </div>
 
 <script>
+    //tags=canarias&tagmode=any&format=json&
+    var flickr = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $.getJSON(flickr, {
+        tags: "Canarias, Canteras",
+        tagmode: "all",
+        format: "json"
+    })
+            .done(function(data){
+                $.each(data.items, function(i, item){
+                    $("<img>").attr("src", item.media.m).appendTo("#images");
+                })
+            })
+            .fail(function(error){
+                console.log("Fallo en el ajax", error);
+            });
     function photos(data){
         console.log(data);
-        $.each(data.items, function(i, item){
-            $("<img>").attr("src", item.media.m).appendTo("#images");
-        })
     }
 </script>
-<script src="http://api.flickr.com/services/feeds/photos_public.gne?tags=canarias&tagmode=any&format=json&jsoncallback=photos"></script>
 </body>
 </html>
