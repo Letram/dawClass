@@ -9,7 +9,7 @@ t = window.setTimeout("LiveSearch()",200);
 function LiveSearch() {
 	// assemble the PHP filename
 	query = document.getElementById("searchlive").value;
-	filename = "http://serdis.dis.ulpgc.es/~gii-daw/ajax/search.php?query=" + query;
+	filename = "http://serdis.dis.ulpgc.es/~gii-daw/ajax/search_cors.php?query=" + query;
 	// DisplayResults will handle the Ajax response
 	ajaxCallback = DisplayResults;
 	// Send the Ajax request

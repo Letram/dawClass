@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function showPhotos(data){
+
+        }
+        var url="http://api.flickr.com/services/feeds/photos_public.gne?tags=canarias&tagmode=any&format=json&jsoncallback=showPhotos";
+        var script = document.createElement("script");
+        script.setAttribute("src", url);
+        document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
