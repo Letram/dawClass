@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="images">
+
+</div>
+
+<script>
+    function photos(data){
+        console.log(data);
+        $.each(data.items, function(i, item){
+            $("<img>").attr("src", item.media.m).appendTo("#images");
+        })
+    }
+</script>
+<script src="http://api.flickr.com/services/feeds/photos_public.gne?tags=canarias&tagmode=any&format=json&jsoncallback=photos"></script>
+</body>
+</html>
