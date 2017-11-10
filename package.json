@@ -1,0 +1,24 @@
+{
+  "name": "dawclass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testJSON.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Letram/dawClass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Letram/dawClass/issues"
+  },
+  "homepage": "https://github.com/Letram/dawClass#readme"
+}
