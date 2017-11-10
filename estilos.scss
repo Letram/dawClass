@@ -3,4 +3,34 @@ section{
     padding:0 10px;
     background-color: #f3fae5;
   }
+
+  &#noGrid{
+    background-color: azure;
+    div{
+      float: left;
+      width: 50%;
+      padding: 7%;
+    }
+  }
+
+  &#precios{
+    .success{
+      background-color: #3e8f3e;
+    }
+    .info{
+    background-color: #28a4c9;
+    }
+    .danger{
+    background-color: #b92c20;
+    }
+    .white_text{
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 750px){
+  #noGrid div{
+    float: none !important;
+  }
 }

@@ -1,0 +1,23 @@
+section#medallas {
+  padding: 0 10px;
+  background-color: #f3fae5; }
+section#noGrid {
+  background-color: azure; }
+  section#noGrid div {
+    float: left;
+    width: 50%;
+    padding: 7%; }
+section#precios .success {
+  background-color: #3e8f3e; }
+section#precios .info {
+  background-color: #28a4c9; }
+section#precios .danger {
+  background-color: #b92c20; }
+section#precios .white_text {
+  color: white; }
+
+@media screen and (max-width: 750px) {
+  #noGrid div {
+    float: none !important; } }
+
+/*# sourceMappingURL=estilos.css.map */
