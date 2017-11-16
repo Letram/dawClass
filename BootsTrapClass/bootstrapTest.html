@@ -195,18 +195,22 @@
             Contacta con nosotros.
         </header>
         <div class="col-xs-8 col-xs-offset-2">
-            <form class="form text-center">
-                <div class="form-group">
+            <form class="form form-inline text-center">
+
+                <div class="form-group has-feedback has-success">
                     <label class="control-label" for="nameText">Nombre</label>
                     <input class="form-control" type="text" name="nameText" id="nameText" placeholder="Nombre...">
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
                 </div>
-                <div class="form-group">
-                    <label class="control-label" for="emailText">Email</label>
-                    <input class="form-control" type="email" name="emailText" id="emailText" placeholder="Mail...">
+                <div class="form-group has-feedback has-error">
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input class="form-control" type="email" name="emailText" id="emailText" placeholder="Mail...">
+                        <span class="glyphicon glyphicon-erase form-control-feedback"></span>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">¡Vente con nosotros!</button>
+                <button type="submit" class="btn btn-primary">¡Ven con nosotros!</button>
             </form>
-
         </div>
     </section>
 </div>
