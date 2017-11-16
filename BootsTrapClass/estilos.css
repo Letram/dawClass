@@ -25,6 +25,13 @@ section#quotes .carousel-indicators {
     background-color: rgba(70, 70, 70, 0.25); }
   section#quotes .carousel-indicators .active {
     background-color: #444; }
+section#intro {
+  background: url("resources/Sky-Nature-Sunlight-Landscapes-Paths-Daisy-Fields-Flowers-Picture-Of.jpg");
+  background-size: cover;
+  color: white;
+  padding-top: 150px; }
+  section#intro .jumbotrom {
+    background-color: rgba(255, 255, 255, 0); }
 
 @media screen and (max-width: 750px) {
   #noGrid div {

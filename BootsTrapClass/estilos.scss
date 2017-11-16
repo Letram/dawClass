@@ -44,6 +44,16 @@ section{
       }
     }
   }
+
+  &#intro{
+    background: url("resources/Sky-Nature-Sunlight-Landscapes-Paths-Daisy-Fields-Flowers-Picture-Of.jpg");
+    background-size: cover;
+    color:white;
+    padding-top: 150px;
+    .jumbotrom{
+      background-color: rgba(255,255,255,0);
+    }
+  }
 }
 
 @media screen and (max-width: 750px){
