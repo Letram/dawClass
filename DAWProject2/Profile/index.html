@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/myCSS.css">
 </head>
 
 <body>
@@ -84,22 +85,118 @@
                                                 </ul>
                                             </nav>
                                         </div>
-                                        <ul class="thread-list">
-                                            <li class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 21</span><span class="title" style="color:rgb(180,100,10);">Mexico - France</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                            <li
-                                            class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 20</span><span class="title" style="color:rgb(160,100,10);">England - Brasil</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                <li
-                                                class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 20</span><span class="title" style="color:rgb(180,100,10);">Finland - Canaries</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                    <li
-                                                    class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 18</span><span class="title" style="color:rgb(160,100,10);">Italy - Russia</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                        <li
-                                                        class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 17</span><span class="title" style="color:rgb(180,100,10);">Poland - Australia</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                            <li
-                                                            class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 19</span><span class="title">New York - Japan</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                                <li
-                                                                class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 17</span><span class="title">Madrid - Praga</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
-                                                                    <li
-                                                                    class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 15</span><span class="title">Barcelona - Lisboa</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                        <ul class="thread-list" id="trip-list">
+                                            <li id="trip1" class="thread" style="color:rgb(0,0,0);">
+                                                <span class="time">Apr 21</span><span class="title" style="color:rgb(180,100,10);">Mexico - France</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description0" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                    <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                    <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                    <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                    <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip2" class="thread" style="color:rgb(0,0,0);">
+                                                <span class="time">Apr 20</span><span class="title" style="color:rgb(160,100,10);">England - Brasil</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description1" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip3" class="thread" style="color:rgb(0,0,0);">
+                                                <span class="time">Apr 20</span><span class="title" style="color:rgb(180,100,10);">Finland - Canaries</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description2" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip4" class="thread" style="color:rgb(0,0,0);">
+                                                <span class="time">Apr 18</span><span class="title" style="color:rgb(160,100,10);">Italy - Russia</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description3" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip5" class="thread" style="color:rgb(0,0,0);">
+                                                <span class="time">Apr 17</span><span class="title" style="color:rgb(180,100,10);">Poland - Australia</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description4" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip6" class="thread">
+                                                <span class="time" style="color:rgb(0,0,0);">Apr 19</span><span class="title">New York - Japan</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description5" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip7" class="thread">
+                                                <span class="time" style="color:rgb(0,0,0);">Apr 17</span><span class="title">Madrid - Praga</span>
+                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <div id="description6" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+
+                                            <li id="trip8" class="thread">
+                                                <span class="time" style="color:rgb(0,0,0);">Apr 15</span><span class="title">Barcelona - Lisboa</span>
+                                                <a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a>
+                                                <div id="description7" class="description">
+                                                    <dl class="dl-horizontal"><dt>Description lists</dt>
+                                                        <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
+                                                        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                        <dd>Donec id elit non mi porta gravida at eget metus.</dd><dt>Malesuada porta</dt>
+                                                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd><dt>Felis euismod semper eget lacinia</dt>
+                                                        <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="tab-pane" role="tabpanel" id="tab-2"></div>
@@ -221,7 +318,7 @@
             </div>
         </div>
     </div>
-    <div style="background-color:rgba(58,47,47,0);background-image:url(&quot;assets/img/footer.png&quot;);background-size:cover;background-repeat:no-repeat;height:277px;">
+    <div style="background-color:rgba(58,47,47,0);background-image:url('assets/img/footer.png');background-size:cover;background-repeat:no-repeat;height:277px;">
         <div class="container">
             <hr>
             <ul class="list-inline" id="text_decoration" style="margin-top:30px;font-family:ABeeZee, sans-serif;">
@@ -239,7 +336,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/javascript.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
