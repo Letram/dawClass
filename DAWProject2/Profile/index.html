@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto2DAWProfile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <header id="header"><img class="img-responsive" src="assets/img/DAWImages/fondo.jpg" id="fondo">
+        <nav class="navbar navbar-default navigation-clean-search">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand" href="#">Tripper </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" role="presentation"><a href="#">Home </a></li>
+                        <li role="presentation"><a href="#">Help </a></li>
+                        <li role="presentation"><a href="#">My trips</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" target="_self">
+                        <div class="form-group">
+                            <label class="control-label" for="search-field"><i class="glyphicon glyphicon-search" style="font-size:20px;"></i></label>
+                            <input class="form-control search-field" type="search" name="search" placeholder="Looking for someone?" id="search-field">
+                        </div>
+                    </form>
+                    <button class="btn btn-default active navbar-btn navbar-right action-button" type="button">Account </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div style="background-color:rgba(0,0,0,0);">
+        <div class="container" style="background-color:#ffffff;">
+            <div class="row">
+                <div class="col-lg-2 col-md-3" id="aboutme" style="background-color:#ffffff;">
+                    <div>
+                        <h1 class="text-center">About me</h1>
+                        <hr>
+                        <div>
+                            <label>Name </label>
+                            <p class="text-nowrap text-center">YourName </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5" id="trips" style="background-color:#ffffff;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">My trips</h1>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <div class="input-group"><span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i></span>
+                                        <input class="form-control" type="search" name="search">
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Today <span class="badge">42</span></a></li>
+                                    <li><a href="#tab-2" role="tab" data-toggle="tab">Lastest <span class="badge">42</span></a></li>
+                                    <li><a href="#tab-3" role="tab" data-toggle="tab">Popular <span class="badge">42</span></a></li>
+                                    <li><a href="#tab-4" role="tab" data-toggle="tab">All <span class="badge">42</span></a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" role="tabpanel" id="tab-1">
+                                        <div class="thread-list-head">
+                                            <nav class="thread-pages">
+                                                <ul class="pagination">
+                                                    <li><a aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                                    <li><a>1</a></li>
+                                                    <li><a>2</a></li>
+                                                    <li><a>3</a></li>
+                                                    <li><a>4</a></li>
+                                                    <li><a>5</a></li>
+                                                    <li><a aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <ul class="thread-list">
+                                            <li class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 21</span><span class="title" style="color:rgb(180,100,10);">Mexico - France</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                            <li
+                                            class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 20</span><span class="title" style="color:rgb(160,100,10);">England - Brasil</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                <li
+                                                class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 20</span><span class="title" style="color:rgb(180,100,10);">Finland - Canaries</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                    <li
+                                                    class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 18</span><span class="title" style="color:rgb(160,100,10);">Italy - Russia</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                        <li
+                                                        class="thread" style="color:rgb(0,0,0);"><span class="time">Apr 17</span><span class="title" style="color:rgb(180,100,10);">Poland - Australia</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                            <li
+                                                            class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 19</span><span class="title">New York - Japan</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                                <li
+                                                                class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 17</span><span class="title">Madrid - Praga</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                                                    <li
+                                                                    class="thread"><span class="time" style="color:rgb(0,0,0);">Apr 15</span><span class="title">Barcelona - Lisboa</span><a href="#" target="_blank"><i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="tab-2"></div>
+                                    <div class="tab-pane" role="tabpanel" id="tab-3"></div>
+                                    <div class="tab-pane" role="tabpanel" id="tab-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4" id="friends" style="background-color:#ffffff;">
+                    <header>
+                        <h1 class="text-center">Friends </h1></header>
+                    <hr>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                                <div class="user-container">
+                                    <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                    <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                                <div class="user-container">
+                                    <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                    <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                                <div class="user-container">
+                                    <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                    <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                                <div class="user-container">
+                                    <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                    <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <button class="btn btn-info btn-block btn-lg" type="button">More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="coments" style="background-color:#ffffff;">
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <h1 class="text-center">Comments </h1></div>
+            <div class="col-lg-12 col-md-12">
+                <div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                            <div class="user-container">
+                                <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                <a href="#" class="user-delete"> <i class="glyphicon glyphicon-remove"></i></a>
+                                <hr>
+                                <div>
+                                    <h4 style="color:rgb(57,34,0);">Comment title</h4>
+                                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien est, scelerisque a lectus eu, faucibus feugiat ligula. Quisque at ex consequat, congue nibh id, sodales nibh. Pellentesque aliquet malesuada purus
+                                        ut tristique. Donec dictum pharetra nunc at efficitur. Phasellus pharetra eu nisi vel tristique. Vivamus euismod scelerisque nisl vitae dapibus. Donec posuere lorem nec ex molestie tristique. Vestibulum ante ipsum
+                                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ornare vel justo pretium aliquam. Etiam sodales diam ac lorem commodo, in placerat ligula mattis. Phasellus ut ante sit amet mauris egestas
+                                        rutrum sed ut tellus. Duis ultrices, velit id congue vestibulum, lorem purus hendrerit enim, ut feugiat dolor massa sit amet odio.&nbsp; </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                            <div class="user-container">
+                                <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                <a href="#" class="user-delete"> <i class="glyphicon glyphicon-remove"></i></a>
+                                <hr>
+                                <div>
+                                    <h4 style="color:rgb(57,34,0);">Comment title</h4>
+                                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien est, scelerisque a lectus eu, faucibus feugiat ligula. Quisque at ex consequat, congue nibh id, sodales nibh. Pellentesque aliquet malesuada purus
+                                        ut tristique. Donec dictum pharetra nunc at efficitur. Phasellus pharetra eu nisi vel tristique. Vivamus euismod scelerisque nisl vitae dapibus. Donec posuere lorem nec ex molestie tristique. Vestibulum ante ipsum
+                                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ornare vel justo pretium aliquam. Etiam sodales diam ac lorem commodo, in placerat ligula mattis. Phasellus ut ante sit amet mauris egestas
+                                        rutrum sed ut tellus. Duis ultrices, velit id congue vestibulum, lorem purus hendrerit enim, ut feugiat dolor massa sit amet odio.&nbsp; </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-item">
+                            <div class="user-container">
+                                <a href="#" class="user-avatar"><img class="img-circle img-responsive" src="assets/img/avatar.jpg" alt="Profile of Mark Smith Peterson" width="48" height="48"></a>
+                                <p class="user-name"><a href="#">Mark Smith Peterson</a><span>Last seen on 27th Sep 2014 </span></p>
+                                <a href="#" class="user-delete"> <i class="glyphicon glyphicon-remove"></i></a>
+                                <hr>
+                                <div>
+                                    <h4 style="color:rgb(57,34,0);">Comment title</h4>
+                                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien est, scelerisque a lectus eu, faucibus feugiat ligula. Quisque at ex consequat, congue nibh id, sodales nibh. Pellentesque aliquet malesuada purus
+                                        ut tristique. Donec dictum pharetra nunc at efficitur. Phasellus pharetra eu nisi vel tristique. Vivamus euismod scelerisque nisl vitae dapibus. Donec posuere lorem nec ex molestie tristique. Vestibulum ante ipsum
+                                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ornare vel justo pretium aliquam. Etiam sodales diam ac lorem commodo, in placerat ligula mattis. Phasellus ut ante sit amet mauris egestas
+                                        rutrum sed ut tellus. Duis ultrices, velit id congue vestibulum, lorem purus hendrerit enim, ut feugiat dolor massa sit amet odio.&nbsp; </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color:rgba(58,47,47,0);background-image:url(&quot;assets/img/footer.png&quot;);background-size:cover;background-repeat:no-repeat;height:277px;">
+        <div class="container">
+            <hr>
+            <ul class="list-inline" id="text_decoration" style="margin-top:30px;font-family:ABeeZee, sans-serif;">
+                <li><a href="#" class="decoration" style="color:rgb(0,0,0);font-size:20px;margin-right:10px;">Home</a></li>
+                <li><a href="#" style="font-size:20px;color:rgb(0,0,0);margin-right:10px;">Help </a></li>
+                <li><a href="#" style="font-size:20px;color:rgb(0,0,0);margin-right:10px;">My trips</a></li>
+                <li><a href="#" style="color:rgb(0,0,0);font-size:20px;margin-right:10px;">Account</a></li>
+            </ul>
+            <p class="text-center" style="margin-top:30px;margin-bottom:15px;"><a href="#" style="font-size:35px;margin-right:30px;"><i class="fa fa-facebook-square" style="color:rgb(0,0,0);margin-right:0px;"></i></a><a href="#" style="font-size:35px;margin-right:30px;"><i class="fa fa-instagram" style="color:rgb(0,0,0);margin-right:0px;"></i></a>
+                <a
+                href="#" style="font-size:35px;margin-right:30px;"><i class="icon ion-social-twitter" style="color:rgb(0,0,0);margin-right:2px;"></i></a><a href="#" style="font-size:35px;margin-right:30px;"><i class="icon ion-social-snapchat" style="color:rgb(0,0,0);margin-right:0px;"></i></a></p>
+            <p class="text-center"
+            style="color:rgb(193,184,184);font-family:ABeeZee, sans-serif;margin-bottom:23px;">Tripper @ 2017</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
