@@ -1,3 +1,10 @@
 .description{
     display:none;
 }
+.description dl,dd,p{
+    color: black;
+}
+
+#moreFriends{
+    display:none;
+}
