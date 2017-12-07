@@ -8,3 +8,11 @@
 #moreFriends{
     display:none;
 }
+
+.voted-up{
+    color:green;
+}
+
+.voted-down{
+    color:darkred;
+}

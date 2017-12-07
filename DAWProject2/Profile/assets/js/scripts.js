@@ -5,14 +5,17 @@ $(document).ready(function() {
 	display = [];
 	buttonState = 1;
 	$('#trip-list li').each(function (index) {
-		degrees.push(45);
+		degrees.push(0.125);
 		display.push(0);
 		icon = $(this).children('i');
 		icon.click(function () {
-			//icon rotates 45deg
-			$(this).css({'transform' : 'rotate('+ degrees[index] +'deg)'});
+			//icon rotates 45deg(0.125turn) or places at the initial position
+			$(this).css({'transform' : 'rotate('+ degrees[index] +'turn)'});
 			$(this).css({'transition' : 'all 0.25s ease-in-out'});
-			degrees[index] += 45;
+			if(degrees[index] === 0.125)
+				degrees[index] = 0;
+			else
+				degrees[index] = 0.125;
 
 			//display(1) or hide(0) the description div
 			if(display[index] === 0){
@@ -24,6 +27,46 @@ $(document).ready(function() {
 			}
         });
 	});
+
+	$('#thumbsUpIcon').click(function () {
+		var parent = $(this).parent();
+		var spanChildren = parent.children('span');
+		if($(this).hasClass("not-voted")){
+			var thumbsDown = $('#thumbsDownIcon');
+			if(thumbsDown.hasClass('voted-down')){
+				thumbsDown.removeClass('voted-down').addClass('not-voted');
+                thumbsDown.parent().children('span').text(
+                	parseInt(thumbsDown.parent().children('span').html())-1
+				);
+			}
+			$(this).removeClass("not-voted").addClass("voted-up");
+			spanChildren.text(parseInt(spanChildren.html())+1);
+		}else{
+            $(this).removeClass("voted-up").addClass("not-voted");
+            spanChildren.text(parseInt(spanChildren.html())-1);
+		}
+    });
+
+	$('#thumbsDownIcon').click(function () {
+		var parent = $(this).parent();
+		var spanChildren = parent.children('span');
+		if($(this).hasClass("not-voted")){
+            var thumbsUp = $('#thumbsUpIcon');
+            if(thumbsUp.hasClass('voted-up')){
+                thumbsUp.removeClass('voted-up').addClass('not-voted');
+                thumbsUp.parent().children('span').text(
+                    parseInt(thumbsUp.parent().children('span').html())-1
+                );
+            }
+			$(this).removeClass("not-voted").addClass("voted-down");
+			spanChildren.text(parseInt(spanChildren.html())+1);
+		}else{
+            $(this).removeClass("voted-down").addClass("not-voted");
+            spanChildren.text(parseInt(spanChildren.html())-1);
+		}
+    });
+
+
 });
 	function showMoreFriends() {
         moreFriends = $('#moreFriends');
