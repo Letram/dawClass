@@ -1,13 +1,14 @@
 $(document).ready(function() {
-
-	tripList = $('#trip-list li');
+    //openPhotoSwipe();
+	tripsTab = $('#trip-list');
+	tripList = tripsTab.find('li');
 	degrees = [];
 	display = [];
 	buttonState = 1;
-	$('#trip-list li').each(function (index) {
+    tripsTab.find('li').each(function (index) {
 		degrees.push(0.125);
 		display.push(0);
-		icon = $(this).children('i');
+		icon = $(this).find('.glyphicon-plus');
 		icon.click(function () {
 			//icon rotates 45deg(0.125turn) or places at the initial position
 			$(this).css({'transform' : 'rotate('+ degrees[index] +'turn)'});
@@ -66,24 +67,69 @@ $(document).ready(function() {
 		}
     });
 
+    var openPhotoSwipe = function() {
+    	console.log("holi");
+        var pswpElement = document.querySelectorAll('.pswp')[0];	console.log(pswpElement);
+        // build items array
+        var itemsCarrousel = [
+            {
+                src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+                w: 500,
+                h: 200
+            },
+            {
+                src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+                w: 500,
+                h: 200
+            }
+        ];
+		var flickr = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		$.getJSON(flickr, {
+			tags: "Canarias, Canteras",
+			tagmode: "all",
+			format: "json"
+		})
+			.done(function(data){
+				$.each(data.items, function(i, item){
+					var source = item.media.m;
+					var imageHeight = 300;
+					var imageWidth = 500;
+					itemsCarrousel.push({
+						src: source,
+						w: imageWidth,
+						h: imageHeight
+					});
+				})
+			})
+			.fail(function(error){
+				console.log("Fallo en el ajax", error);
+			});
+        var options = {
+            history: false,
+            focus: false,
+            showAnimationDuration: 0,
+            hideAnimationDuration: 0
+        };
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, itemsCarrousel, options);
+        gallery.init();
+    };
+	$(".photoGallery").click(openPhotoSwipe);
 
 });
-	function showMoreFriends() {
-        moreFriends = $('#moreFriends');
-        button = $('#moreFriendsButton');
-
+function showMoreFriends() {
+	moreFriends = $('#moreFriends');
+	button = $('#moreFriendsButton');
         //More = 1 , Less = 0
-		if(buttonState === 1){
-			button.html("Less");
-			buttonState = 0;
-		}else{
-			button.html("More");
-			buttonState = 1;
-		}
+	if(buttonState === 1){
+		button.html("Less");
+		buttonState = 0;
+	}else{
+		button.html("More");
+		buttonState = 1;
+	}
 		//we show a div with more friends
-        if(moreFriends.css('display') === 'none')
-            moreFriends.show(250);
-        else
-            moreFriends.hide(250);
-
-    }
+	if(moreFriends.css('display') === 'none')
+		moreFriends.show(250);
+	else
+		moreFriends.hide(250);
+}

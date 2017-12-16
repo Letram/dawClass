@@ -16,3 +16,15 @@
 .voted-down{
     color:darkred;
 }
+
+.avatar{
+    width: 120px;
+    height: 120px;
+}
+
+.icons{
+    color:rgb(0,0,0);
+    font-size:20px;
+    float: right;
+    padding: 0px 10px;
+}

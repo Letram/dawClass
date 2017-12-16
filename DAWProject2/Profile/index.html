@@ -4,12 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto2DAWProfile</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/AnimatedNumberElement.js"></script>
+    <script src="assets/js/photoswipe-ui-default.min.js"></script>
+    <script src="assets/js/photoswipe.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/photoswipe.css">
+    <link rel="stylesheet" href="assets/css/default-skin/default-skin.css">
+
     <link rel="stylesheet" href="assets/css/myCSS.css">
 </head>
 
@@ -45,8 +57,31 @@
                         <h1 class="text-center">About me</h1>
                         <hr>
                         <div>
+                            <img class="avatar" src="assets/img/avatar.jpg" alt="avatar">
+                        </div>
+                        <div>
                             <label>Name </label>
                             <p class="text-nowrap text-center">YourName </p>
+                        </div>
+                        <div><label>Valorations </label>
+                            <div>
+                                <p class="text-nowrap text-center">Kindness </p>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-nowrap text-center">Cleanliness </p>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-nowrap text-center">Another attribute</p>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +122,8 @@
                                         <ul class="thread-list" id="trip-list">
                                             <li id="trip1" class="thread" style="color:rgb(0,0,0);">
                                                 <span class="time">Apr 21</span><span class="title" style="color:rgb(180,100,10);">Mexico - France</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description0" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                     <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -101,7 +137,8 @@
 
                                             <li id="trip2" class="thread" style="color:rgb(0,0,0);">
                                                 <span class="time">Apr 20</span><span class="title" style="color:rgb(160,100,10);">England - Brasil</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description1" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -115,7 +152,8 @@
 
                                             <li id="trip3" class="thread" style="color:rgb(0,0,0);">
                                                 <span class="time">Apr 20</span><span class="title" style="color:rgb(180,100,10);">Finland - Canaries</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description2" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -129,7 +167,8 @@
 
                                             <li id="trip4" class="thread" style="color:rgb(0,0,0);">
                                                 <span class="time">Apr 18</span><span class="title" style="color:rgb(160,100,10);">Italy - Russia</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description3" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -143,7 +182,8 @@
 
                                             <li id="trip5" class="thread" style="color:rgb(0,0,0);">
                                                 <span class="time">Apr 17</span><span class="title" style="color:rgb(180,100,10);">Poland - Australia</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description4" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -157,7 +197,8 @@
 
                                             <li id="trip6" class="thread">
                                                 <span class="time" style="color:rgb(0,0,0);">Apr 19</span><span class="title">New York - Japan</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description5" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -171,7 +212,8 @@
 
                                             <li id="trip7" class="thread">
                                                 <span class="time" style="color:rgb(0,0,0);">Apr 17</span><span class="title">Madrid - Praga</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons photoGallery"></i>
                                                 <div id="description6" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -185,7 +227,8 @@
 
                                             <li id="trip8" class="thread">
                                                 <span class="time" style="color:rgb(0,0,0);">Apr 15</span><span class="title">Barcelona - Lisboa</span>
-                                                <i class="glyphicon glyphicon-plus tripIcon" style="color:rgb(0,0,0);font-size:20px;"></i>
+                                                <i class="glyphicon glyphicon-plus tripIcon icons"></i>
+                                                <i class="glyphicon glyphicon-camera icons"></i>
                                                 <div id="description7" class="description">
                                                     <dl class="dl-horizontal"><dt>Description lists</dt>
                                                         <dd>A description list is perfect for defining terms.</dd><dt>Euismod</dt>
@@ -378,10 +421,71 @@
             style="color:rgb(193,184,184);font-family:ABeeZee, sans-serif;margin-bottom:23px;">Tripper @ 2017</p>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/AnimatedNumberElement.js"></script>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 </html>
