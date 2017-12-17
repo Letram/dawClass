@@ -66,23 +66,43 @@ $(document).ready(function() {
             spanChildren.text(parseInt(spanChildren.html())-1);
 		}
     });
-
     var openPhotoSwipe = function() {
-    	console.log("holi");
+        console.log("holi");
         var pswpElement = document.querySelectorAll('.pswp')[0];	console.log(pswpElement);
         // build items array
         var itemsCarrousel = [
             {
                 src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
                 w: 500,
-                h: 200
+                h: 300
             },
             {
                 src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
                 w: 500,
-                h: 200
+                h: 300
             }
         ];
+        var ajax= new XMLHttpRequest();
+        ajax.onreadystatechange=function(){
+            if(this.readyState== 4 && this.status == 200) {
+            	console.log(this.responseText);
+                var res = JSON.parse(this.responseText);
+                for (var i = 0; i < res.length; i++) {
+                    console.log(res[i]);
+                    var source = res[i].src;
+                    var imageHeight = res[i].h;
+                    var imageWidth = res[i].w;
+                    itemsCarrousel.push({
+                        src: source,
+                        w: imageWidth,
+                        h: imageHeight
+                    });
+                }
+            }
+        };
+        ajax.open("get","get_photos.php",false);
+        ajax.send();
+        /*
 		var flickr = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 		$.getJSON(flickr, {
 			tags: "Canarias, Canteras",
@@ -104,6 +124,7 @@ $(document).ready(function() {
 			.fail(function(error){
 				console.log("Fallo en el ajax", error);
 			});
+		*/
         var options = {
             history: false,
             focus: false,
